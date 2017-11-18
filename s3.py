@@ -15,8 +15,9 @@ for bucket in s3.buckets.all():
 #define the bucket where you want to upload your data
 BUCKET_NAME = input('Enter the bucket name you want to upload ')
 #defining the date which needs to upload
-data = open('', 'rb')
-s3.Bucket(BUCKET_NAME).put_object(Key='bitmoji.png', Body=data)
+#data = open('', 'rb')
+#s3.Bucket(BUCKET_NAME).put_object(Key='bitmoji.png', Body=data)
+s3.meta.client.upload_file('testrony.txt'.BUCKET_NAME,'testrony.txt')
 print ("Done")
 
 
